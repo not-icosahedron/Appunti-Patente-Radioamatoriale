@@ -320,6 +320,12 @@ TSWLatexianTemp*
 # xwatermark package
 *.xwm
 
+# Personal images
+logo_finale_og.png
+logo_finale_rgb.png
+logo_finale.png
+
+
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.

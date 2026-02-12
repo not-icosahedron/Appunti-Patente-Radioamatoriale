@@ -1,0 +1,88 @@
+\documentclass[9pt, a4paper, openany, twoside]{scrreprt}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+\usepackage[a-2b]{pdfx}
+
+\usepackage{tikz}
+ \usepackage{contour}
+
+\usepackage{scrhack}
+\usepackage{lmodern}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[italian]{babel}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage[hyphenation, parindent, lastparline , homeoarchy , rivers]{impnattypo} %may be useless
+ \usepackage[normalem]{ulem}
+ \useunder{\uline}{\ul}{}
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+\renewcommand{\arraystretch}{1.2} % for the vertical padding
+\usepackage{multicol}
+\usepackage{bookman}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{warmblack}{RGB}{15, 67, 66}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{emptypage}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{hyperref}
+\usepackage{xltabular} %tabularx long table environment
+\usepackage{minitoc} 
+\renewcommand{\mtifont}{\small}
+\renewcommand{\mtcfont}{\small}
+\renewcommand{\mtcSfont}{\small}
+\renewcommand{\mtcSSfont}{\small}
+\renewcommand{\mtcSSSfont}{\small}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{25pt}
+\pagestyle{fancy}
+\fancyhead[L,R]{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyfoot[LE,RO]{\includegraphics[height=0.7cm]{images/logo_finale.png}}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\input{title-page}
+\cleardoublepage
+
+\renewcommand{\listtablename}{Tables}
+
+\dominitoc
+
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+\renewcommand{\arraystretch}{1.2} % for the vertical padding
+
+\addtocontents{toc}{\protect\pagestyle{empty}}
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+\pagestyle{fancy}
+
+\pagenumbering{gobble}
+\part{Radiotecnica}
+\chapter{Fondamenti di Elettrotecnica}
+\input{chapters/RadioTecnica}
+
+\chapter{Componenti}
+
+\part{Codice Q}
+
+\part{Legislatura}
+
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+\end{document}
